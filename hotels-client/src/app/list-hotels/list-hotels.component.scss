@@ -1,0 +1,148 @@
+@import "../../settings";
+
+.container-hotel {
+  position: relative;
+  z-index: -2;
+  width: 90%;
+  margin-left:auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding:1em;
+  margin-top:1em;
+
+  @include since($medium){
+    width: 60%;
+  }
+
+  @include since($large){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin:0 1em 1em ;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    width: 98%;
+    height: 200px;
+    padding:0.5em;
+    -webkit-box-shadow: 0 2px 3px #e5e5e5;
+            box-shadow: 0 2px 3px #e5e5e5;
+  }
+
+  .containerItemsHotel{
+    @include since($large){
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%;
+    }
+
+    & div:first-child{
+      padding:0 1em;
+    }
+
+    & div:last-child:not(.ButtonHotel){
+      @include since($large){
+        border-left: 1px dashed #9a9a9a;
+        padding:2em;
+        width: 35%;
+      }
+    }
+  }
+
+  & .imageHotel {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+
+    @include since($large){
+      margin: 0;
+      width: 300px;
+    }
+  }
+
+  & .nameHotel {
+    color: #0c7cb5;
+    margin: 1em 0;
+
+    @include since($large){
+      margin: 0 0 .5em 0;
+      font-size:14px;
+    }
+  }
+
+  & .lineHorizontal {
+    display: block;
+    width: 100%;
+    border: 1px dashed #9a9a9a;
+    margin: 1.5em 0;
+
+    @include since($large){
+      display: none;
+    }
+  }
+
+  & .title-price{
+    color: #888888;
+    text-align: center;
+    margin: 1em 0;
+
+    @include since($large){
+      margin: 0.5em;
+      font-size:13px;
+    }
+  }
+
+  & .price{
+    color:#e16800;
+    font-size:2em;
+    text-align: center;
+    font-weight:bold;
+    margin-bottom: 1em;
+
+    @include since($medium){
+      font-size:3vw;
+    }
+    @include since($large){
+      font-size:1.6em;
+      margin-bottom:0;
+    }
+
+    & span{
+      font-weight:normal;
+      margin-right: 5px;
+      font-size: 0.8em;
+    }
+  }
+
+  & .ButtonHotel{
+    padding:.5em;
+    font-weight:bold;
+    font-size: 25px;
+    text-align: center;
+    background-color: #002979;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 0px darken(#002979,10);
+            box-shadow: 0 2px 0px darken(#002979,10);
+    margin-bottom:2em;
+
+    &:hover{
+      background-color: lighten(#002979,10);
+    }
+
+    @include since($large){
+      font-size:14px;
+      margin: .5em auto 0;
+      padding:.5em;
+      width: 80%;
+    }
+  }
+}
+
+
+

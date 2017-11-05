@@ -1,0 +1,61 @@
+<main>
+
+  <header class="main-header">
+    <img src="../assets/images/logo-almundo.svg" alt="">
+  </header>
+
+  <div class="main-container">
+    <nav class="main-nav">
+
+      <h2 (click)="toggleMenuFilter(menuFilter)">Filtrar</h2>
+
+      <div class="container-filters" #menuFilter>
+
+        <div class="containerFilterName">
+          <p><img src="../assets/icons/filters/search.svg" alt="">Nombre de hotel</p>
+          <input type="text" placeholder="buscar por nombre" (keyup)="searchHotel($event.target.value)">
+        </div>
+
+        <div class="containerFilterStars">
+
+          <p><img src="../assets/icons/filters/star.svg" alt="">Estrellas</p>
+
+          <div class="itemFilterStar">
+            <input type="radio" [checked]='true' (click)='findByStars(0)' name="stars">
+            <label>Todas las estrellas</label>
+          </div>
+
+          <div class="itemFilterStar">
+            <input type="radio" name="stars" (click)="findByStars(5)">
+            <img class="item-star" *ngFor="let i of [1,2,3,4,5]" src="../../assets/icons/filters/star.svg" alt="">
+          </div>
+          <div class="itemFilterStar">
+            <input type="radio" name="stars" (click)="findByStars(4)">
+            <img class="item-star" *ngFor="let i of [1,2,3,4]" src="../../assets/icons/filters/star.svg" alt="">
+          </div>
+          <div class="itemFilterStar">
+            <input type="radio" name="stars" (click)="findByStars(3)">
+            <img class="item-star" *ngFor="let i of [1,2,3]" src="../../assets/icons/filters/star.svg" alt="">
+          </div>
+          <div class="itemFilterStar">
+            <input type="radio" name="stars" (click)="findByStars(2)">
+            <img class="item-star" *ngFor="let i of [1,2]" src="../../assets/icons/filters/star.svg" alt="">
+          </div>
+          <div class="itemFilterStar">
+            <input type="radio" name="stars" (click)="findByStars(1)">
+            <img class="item-star" src="../../assets/icons/filters/star.svg" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    <section>
+      <ng-progress ></ng-progress>
+      <app-list-hotels [hotels]="AllHotels"></app-list-hotels>
+    </section>
+  </div>
+
+</main>

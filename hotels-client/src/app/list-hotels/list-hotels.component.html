@@ -1,0 +1,18 @@
+<article class="container-hotel" *ngFor="let hotel of hotels">
+  <img class="imageHotel" src="../../assets/images/hotels/{{hotel.image}}" alt="">
+  <div class="containerItemsHotel">
+    <div>
+      <h3 class="nameHotel">{{hotel.name}}</h3>
+      <app-stars [numberStart]="hotel.stars"></app-stars>
+      <app-amenities [Amenities]="hotel.amenities"></app-amenities>
+    </div>
+
+    <span class="lineHorizontal"></span>
+
+    <div>
+      <p class="title-price"> Precio por noche por habitacion </p>
+      <p class="price"><span>ARS</span>{{hotel.price}}</p>
+      <div class="ButtonHotel">Ver hotel</div>
+    </div>
+  </div>
+</article>

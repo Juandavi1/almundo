@@ -1,0 +1,20 @@
+@import "../../settings";
+
+.container-Amenities{
+  margin: 1em 0;
+
+  @include since($large){
+    margin: 0;
+  }
+}
+
+.item-Amenities{
+  width: 25px;
+  margin: 0 .5em;
+
+  @include since($large){
+    width: 20px;
+    margin: 0 8px 0 0;
+  }
+}
+

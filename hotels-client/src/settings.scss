@@ -1,0 +1,11 @@
+//break point
+$medium:612px;
+$large: 1024px;
+
+//mixin
+@mixin since($viewport){
+  @media screen and (min-width: $viewport){
+    @content
+  }
+}
+

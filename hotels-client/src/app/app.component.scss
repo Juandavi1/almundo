@@ -1,0 +1,164 @@
+@import "../settings";
+
+main{
+
+  -webkit-animation: showMain 1s 1;
+  animation: showMain 1s 1;
+  will-change: opacity;
+
+  @-webkit-keyframes showMain {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  @keyframes showMain {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  & .main-header{
+    background-color: #05397d;
+    padding:1em;
+  }
+}
+
+.main-nav{
+  position: relative;
+
+  @include since($large){
+    width: 20%;
+  }
+
+  & > h2{
+    text-align: center;
+    padding:1em 0;
+    cursor: pointer;
+    background-color: #fff;
+    font-size:15px;
+    color: #0679b3;
+
+    @include since($large){
+      text-align: Left;
+      font-size:13px;
+      padding:1em;
+      color:darken(#e5e5e5,50%);
+      margin-bottom:.5em;
+    }
+  }
+
+  & .itemFilterStar{
+    cursor: pointer;
+    margin-bottom:.5em;
+
+    & .item-star{
+      width: 15px;
+    }
+
+    & label{
+      font-size: 11px;
+      color: darken(#c4c4c4,30%);
+      font-weight:bold;
+    }
+  }
+}
+
+.main-container{
+  max-width: 1500px;
+  margin: auto;
+
+  @include since($large){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding:1em;
+  }
+
+  & section{
+    @include since($large){
+      width: 80%;
+    }
+  }
+}
+
+.container-filters{
+  margin: auto;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+  width: 100%;
+
+  @include since($large){
+    position: relative;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    left:0;
+  }
+}
+
+.showed{
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.containerFilterName{
+  color:#0679b3;
+  font-weight:bold;
+  font-size:13px;
+  padding: 1em;
+  margin-bottom:.5em;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 3px darken(#e2e2e2,20%);
+          box-shadow: 0 2px 3px darken(#e2e2e2,20%);
+
+  & p{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom:.5em;
+  }
+
+  & p img{
+    width: 15px;
+    height: 15px;
+    margin-right:.5em;
+  }
+
+  & input{
+    padding:.3em .5em;
+    width: 100%;
+  }
+}
+
+.containerFilterStars{
+  background-color: #fff;
+  padding:1em;
+  -webkit-box-shadow: 0 2px 3px darken(#e2e2e2,20%);
+          box-shadow: 0 2px 3px darken(#e2e2e2,20%);
+  & p{
+    color:#0679b3;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom: 1em;
+
+    & img{
+      width: 15px;
+      height: 15px;
+      margin-right:.5em;
+    }
+  }
+}
