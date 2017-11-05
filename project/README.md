@@ -3,9 +3,10 @@
 
 la carpeta enviada cuenta con dos proyectos, el primero es la carpeta proyect en el cual se encuentra el codigo de la API REST en nodejs, por otro lado se encuentra la carpeta hotels-client en el cual se encuentra el codigo del cliente, realizado en Angular.
 
-para iniciar, se debe ejecutar el siguiente comando en la carpeta de cada proyecto.  
-Antes de eso, para poder ejecutar los comando se debe tener instalado el gestor de paquetes que viene con nodejs, 
+Antes de todo, para poder ejecutar los comandos necesarios para hacer funcionar los proyectos, se debe tener instalado el gestor de paquetes que viene con nodejs o cualquier otro como por ejemplo [yarn](https://yarnpkg.com/lang/en/docs/install/), 
 de no tenerlo, se puede descargar a travez de la pagina, [nodejs](https://nodejs.org/en/)  
+
+para iniciar, se debe ejecutar el siguiente comando en la carpeta de cada proyecto.  
 
 ## Start
 ```bash
