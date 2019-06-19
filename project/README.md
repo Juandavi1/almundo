@@ -1,7 +1,7 @@
 
 ## Examen almundo 
 
-## Start
+## Instalar dependencias
 ```bash
 $ npm i ó yarn 
 ```
